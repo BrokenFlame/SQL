@@ -1,5 +1,6 @@
 SELECT name, setting FROM pg_settings WHERE context = 'sighup' and name in (
-'ssl'
+,'ssl_library'
+,'ssl'
 ,'ssl_prefer_server_ciphers'
 ,'ssl_ciphers'
 ,'ssl_dh_params_file'
