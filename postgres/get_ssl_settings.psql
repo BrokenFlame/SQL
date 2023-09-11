@@ -1,0 +1,16 @@
+SELECT name, setting FROM pg_settings WHERE context = 'sighup' and name in (
+'ssl'
+,'ssl_prefer_server_ciphers'
+,'ssl_ciphers'
+,'ssl_dh_params_file'
+,'ssl_ecdh_curve'
+,'ssl_min_protocol_version'
+,'ssl_max_protocol_version'
+,'ssl_ca_fil'
+,'ssl_cert_file' 
+,'ssl_crl_file'
+,'ssl_key_file'
+,'ssl_passphrase_command'
+,'ssl_passphrase_command_supports_reload'
+)
+ORDER BY 1;
