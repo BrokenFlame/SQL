@@ -1,0 +1,9 @@
+DO $$
+BEGIN
+IF EXISTS (SELECT * FROM pg_available_extensions WHERE name='pgcrypto' AND installed_version is NOT null) THEN
+raise notice 'Plugin Already Installed';
+else
+create extension pgcrypto;
+raise notice 'Plugin Installed';
+END IF;
+END $$;
