@@ -1,0 +1,10 @@
+SELECT name, setting FROM pg_settings WHERE name IN (
+'log_disconnections'
+,'log_connections'
+,'log_hostname'
+,'log_timezone'
+,'log_line_prefix'
+,'log_file_mode'
+,'log_statement'
+)
+ORDER BY 1;
