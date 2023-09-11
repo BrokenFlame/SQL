@@ -1,0 +1,7 @@
+alter system set log_connections = 'on';
+alter system set log_disconnections = 'on';
+alter system set log_error_verbosity = 'verbose';
+alter system set log_hostname= 'off';
+alter system set log_statement='ddl';
+alter system set log_timezone='UTC';
+select pg_reload_conf();
