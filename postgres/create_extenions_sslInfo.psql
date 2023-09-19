@@ -1,0 +1,9 @@
+DO $$
+BEGIN
+IF EXISTS (SELECT * FROM pg_available_extensions WHERE name='sslinfo' AND installed_version is NOT null) THEN
+raise notice 'Plugin Already Installed';
+else
+create extension sslinfo;
+raise notice 'Plugin Installed';
+END IF;
+END $$;
